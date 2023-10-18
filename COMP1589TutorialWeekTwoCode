@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+    <style>
+    body { 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+        box-sizing:border-box;
+    }
+
+    .fb {
+        background-color: #385998;
+        color: white;
+    }
+    .twitter {
+        background-color: #55acee;
+        color: white;
+    }
+    .google {
+        background-color: #dd4b39;
+        color: white;
+    }
+
+    input[type=submit] {
+        background-color: #04aa6d;
+        color:white;
+        cursor:#04aa6d
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .hide-md-lg {
+        display: none;
+    }
+
+    @media screen and (max-width: 650px) {
+        .col {
+            width:100%;
+            margin-top: 0;
+        }
+    .v1 {
+        display:none;
+    }
+    .hide-md-lg {
+        display:block;
+        text-align: center;
+    }
+    }
+
+    </style>
+    <!-- This is a comment, it's invisible in the source but not on the page-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Hello World </title>
+    </head>
+    <body>
+        <h2> Responsive Social Login Firm </h2>
+        <p> Resize the browser window to see the responsive effect. When the
+            screen is less than 650px wide, make the two columns stack on top of each 
+            other instead of next to each other.</p>
+
+            <div class="container">
+                <form action="/action_page.php">
+                    <div class="row">
+                        <h2 style="text-align:center"> Login with Social Media or Manually </h2>
+                        <div class="v1">
+                            <span class="v1-innertext"> or </span>
+                        </div>
+
+                        <div class="col">
+                            <a href="#" class="fb btn">
+                                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                            </a>
+                            <a href="#" class="twitter btn">
+                                <i class="fa fa-twitter fa-fw"></i> Login with twitter
+                            </a>
+                            <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                            </i> Login with Google+
+                        </a>
+                    </div>
+                    <div class="col">
+                        <div class="hide-md-lg">
+                            <p> Or sign in Manually </p>
+                        </div>
+
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="text" name="password" placeholder="Password" required>
+                        <input type="submit" value="Login">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="button container">
+            <div class="row">
+                <div class="col">
+                    <a href="#" style="color: white" class="btn"> Sign up </a>
+                </div>
+                <div class="col">
+                    <a href="#" style="color: white" class="btn"> Forgot password? </a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

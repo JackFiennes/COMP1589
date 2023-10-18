@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- This is not actually a HTML tag but rather information for the browser to understand which version of HTML to treat this file as - in the case of the above tag it is HTML5 -->
+<html lang="en-GB">
+    <!-- Lang attitude inside the the opening tags sets the language for the page -->
+    <head>
+        <!-- This is a comment, it's invisibl in the source but not on the page-->
+        <!-- Inside this head tag we nest our metadata which describes the document to the machine-->
+        <meta charset="utf-8">
+        <!-- Will be covered in more detail in the future, describes how the page should be processed, displayed and interpreted by search engines -->
+        <!-- Sets our page encoding, determines what characters we can use. UTF - 8 is standard character encoding you should use in web pages, unicode standard allowing many languages and symbols -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Viewport meta tag determines how webpage should respond across different screen sizes - known as responsive. Values in tag ensure website width matches the viewport width on device and our initial scale is 1 (100%)-->
+        <title> Hello World </title>
+        <!-- Sets the web page title -->
+    </head>
+    <body>
+        <h1> Hello World </h1>
+        <!-- h1 tag is a heading tag and by default browsers will render this in a standard way -->
+        <a href="https://www.gre.ac.uk/" target="_blank"> Visit the University of Greenwich Website! </a>
+        <!-- href attribute determines where the user is taken when they click the link -->
+        <!-- Target attribute determines where we should open the new webpage. If you omit this attribute it will navigate within the current tab but because we are using _blank it does this in a blank tab -->
+        <img
+        src="https://www.gre.ac.uk/__data/assets/image/0035/265688/logo_final_on_white.png" alt="University of Greenwich Logo" />
+        <!-- Image tag lets us include an image -->
+        <!-- alt attribute provides accessibility support for those with screen readers primarily, ensuring that they can understand what the image is trying to portray -->
+    </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<body>
+<!-- Our markup approach is good but mixes our JS and HTML, especially if we put our JS in an external file -->
+<form onsubmit="return checkform()"></form>
+<script>
+    function checkform(){ alert('checked') }
+</script>
+<form name="my_form"></form>
+<!--
+    Using a JS heavy approach we can programmatically add (or remove) event 
+    listeners to our form using the forms name, or any other valid JS element selector.
+
+    Below we are using the special reserved array "forms" on the document, to 
+    access a named list of forms by our page - however you'll more commonly see
+    the use of getElementByID or querySelector
+-->
+<script>
+    function checkform() { alert('checked') }
+    document.forms['my_form'].addEvenetListener('submit', checkform);
+</script>
+<script>
+// You can see we are using an arrow function here rather than standard "classic" definition 
+// In this case, where we don't have a function reference (i.e. a name to call it by) we refer to it 
+// as anonymous.
+
+document.forms['my_form'].addEventListener('submit', (event) => {
+// Here we prevent the default action of the event, in this case form submitting 
+    event.preventDefault()
+    alert('form submitted')
+})
+// Store in a variable for reuse later
+const form = document.forms['my_form']
+
+form.addEvenetListener('submit', (event) => {
+    event.preventDefault()
+
+    // Load the data into the FormData class
+    const FD = new FormData(form)
+
+    // We can put our form validation logic here
+})
+
+form.addEvenetListener('submit', (event) => {
+    event.preventDefault()
+
+    // Load the data into the Form Data class
+    const FD = new FormData(form)
+
+    // Check that the field is not just a blank string
+    if (FD.get('field_name') == '') {
+        // Display an error message under the form if it is - 
+        // there are better ways to do this, do you see why?
+        form.append('This field is required')
+
+        // Exit the function, this stops the rest of the code running after this point
+        return
+    }
+
+    // Check if the user has accepted our terms and conditions,
+    // i.e. they have clicked the checkbox input element
+    // We are checking if this has a value, if it doesn't then the user hasn't checked the box
+    if (!FD.get('checkbox_input_field')) {
+        alert('terms and conditions must be accepted')
+        return
+    }
+})
+</script>
+<form>
+    <label for="fname"> First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname"> Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+</form>
+<p> Choose your favourite web language </p>
+<form>
+    <input type="radio" id="html" name="fav_language" value="html">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="CSS">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="javascript">
+    <label for="javascript">javascript</label>
+</form>
+<p> Which vehicle do you use for transport? </p>
+<form>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1">I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2">I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3">I have a boat</label>
+</form>
+<p> Please enter your first and last name </p>
+<form action="/action_page.php" target="_blank">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<form action="/action_page.php" target="_self">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<form action="/action_page.php" target="_parent">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<form action="/action_page.php" target="_top">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<form action="/action_page.php" target="_blank">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<h1> The method attribute </h1>
+<p> This form will be submitted using the GET method: </p>
+<form action="/action_page.php" target="_blank" method="get">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<p> After you submit, notice that the form value is visible in the adress bar of the browser tab </p>
+<h2> The method attribute </h2>
+<p> This form will be submitted using the POST method: </p>
+<form action="/action_page.php" target="_blank" method="post">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<p> After you submit, notice that, unlike the GET method, the form values are NOT visible in the address bar of the new browser tab </p>
+<form>
+    <label for="lname">First name:</label>
+</form>
+<h3>The input readonly attribute</h3>
+<p>The readonly attribute specifies that an input field should be read - only, meaning it cannot be changed:</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John" readonly><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<h4>The input disabled attribute</h4>
+<p> The disabled attribute specifies that an input field should be disabled, i.e unusable and un - clickable:</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John" disabled><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="submit">
+</form>
+<h5>The input size attribute</h5>
+<p>The size attribute specifies the width in characters of an input field:</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50"><br>
+    <label for="pin">PIN:</label><br>
+    <input type="text" id="pin" name="pin" size="4"><br><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

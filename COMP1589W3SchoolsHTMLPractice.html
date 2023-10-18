@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB"> <!--This declares that the language of the document and page is British English.-->
+    <head>
+        <title> Page Title </title>
+        <style> 
+            body { 
+                background-color: aquamarine;
+                background-image: url('img_girl.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            h1 {color: blue;} 
+            p {
+                border: 2px solid powderblue;
+                padding: 30px;
+                color: brown;
+                background-image: url('img_girl.jpg');
+            }
+            a:link, a :visited {
+                background-color: #f44336;
+                color: white;
+                padding: 15px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            a:hover, a:active {
+                background-color: red;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-radius: 10px;
+                border-collapse: collapse;
+                border-style: inset;
+                border-color: burlywood;
+            }
+            th, td {
+                background-color: aliceblue;
+                text-align: left;
+            }
+        </style>
+<!--Internal CSS is used to define a style for a single HTML page and is defined in the head section within a style element-->
+        <link rel="stylesheet" href="styles.css">
+        <!--An external style sheet is used to define the style for a HTML page by adding it to the head section of that page.-->
+    </head>
+    <body style="background-color: azure;"> <!--This will set the background color of all elements within the body to azure.-->
+        <h1 style="font-size: 60px;"> This is my first, and most important, heading </h1>
+        <h2> This is my second and secondmost impotant heading. Headings go up to 6, decreasing in importance </h2>
+        <p style="background-color: bisque;"> This is a paragraph </p><!--This will set the background color of the paragraph to bisque, overriding the previous command for the body.-->
+        <hr> <!--This is a horizontal line I have inserted in between my paragaphs.-->
+        <p> This is a paragaph <br> with a line break. </p>
+        <p title="I am a tooltip"> This is a paragraph. </p>
+        <p style="color: blueviolet;"> This is a paragraph with blueviolet text </p>
+        <a href="https://www.w3schools.com"> This is a link </a>
+        <img src="W3Schools.jpg" alt="W3Schools.com" width="104" height="142">
+        <hr><!--Horizontal line tags, like the one inserted above are self closing.-->
+        <p> The sound barrier at sea level is roughly 765 miles per hour,
+            or one mile per 4.7 seconds. 
+        </p> <!--The above paragraph will be displayed on a single line because it has not been preformatted.-->
+        <pre> The first plane to break the sound barrier was either the F86 Sabre
+            or the Bell X-1, depending on which record you believe.
+        </pre> <!--This text will be displayed as written because it has been preformatted using the <pre></pre> tag.-->
+        <p style="font-family: 'Courier New', Courier, monospace;"> This paragaph's font has been set to courier. </p>
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> This paragraph's font has been set to sans - serif </p>
+        <p style="font-size: 160%;"> This paragph's font size has been set at 160%. </p>
+        <h4 style="font-size: large;"> This paragaph's font size has been set to 300%. </p>
+        <p style="text-align: center;"> The text of this paragraph has been aligned to the center of the page </p>
+        <h5 style="text-align: left;"> The text of this header has been aligned to the left. </h5>
+        <i> This text is Italic </i>
+        <em> This text is emphasised </em>
+        <small> This is some smaller text </small>
+        <p> In this paragaph the word <mark> milk </mark> is highlighted </p>
+        <p> In this paragraph the word <del> blue </del> is deleted from the document </p>
+        <p> In this paragraph the word <del> blue </del> has been deleted and the word <ins> red </ins> has been inserted </p>
+        <p> The word <sub> subscripted </sub> appears half a character below the normal line because it is subscripted text </p>
+        <p> The word <sup> superscripted </sup> appears half a character above the normal line because it is superscripted text </p>
+        <p> This is a quote from WWF's website </p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 60 years, WWF has worked to help people and nature thrive. 
+            As the world's leading conservation organization, WWF works in nearly 100 countries. 
+            At every level, we collaborate with people around the world to develop 
+            and deliver innovative solutions that protect communities, wildlife, and the places 
+            in which they live.
+        </blockquote>
+        <p> This is a paragraph with <q> Quoted text </q></p>
+        <p> The <abbr title="World Health Organisation"> WHO </abbr> was founded in 1948. </p>
+        <!--The <adress> tag defines the contact information for the author/owner of a document or an article-->
+        <address>
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland.<br>
+            USA.
+        </address>
+        <!--The HTML <cite> tag defines the title of a creative work, not the creator's name itself, and usually renders in Italic.-->
+            <p><cite> The Scream </cite> By Edvard Munch. Painted in 1893. </p>
+        <!--The <bdo> tag is used to override the current text direction-->
+            <bdo dir="rtl"> This text will be written from right to left </bdo>
+        <!--We can also use Html to the colors of the borders around headers-->
+        <h6 style="border: 2px solid tomato;"> Hello World </h6>
+        <!--In HTML, colors can be specified using RGB values, HEX values, HSL values, RGBA values and HSLA values.-->
+        <!--Inline CSS is used to apply a unique style to a single HTML element using the style attribute of an HTML element.-->
+        <p style="color:blue;"> A Blue paragraph </p>
+        <a href="https://www.w3schools.com/" target="_blank" title="Go to W3Schools HTML section"> Visit W3SChools! </a>
+        <!--The above code opens the linked website in a new browser window or tab-->
+        <a href="default.asp">
+            <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+        </a>
+        <!--To use an image as a link just put the img tag inside the a tag.-->
+        <!--The mailto feature can be used inside the href attribute to create a link that open's the user's email program (to let them send a new email)-->
+        <a href="mailto:someone@example.com"> Send email </a>
+        <!--To use an HTML button as a link you have to add some JS code which allows you to specify what happens at certain events, such as the click of a button-->
+        <button onclick="document.location='default.asp'"> HTML tutorial </button>
+        <!--How to create a bookmark in HTML-->
+        <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+        <p><img src="smiley.gif" alt="Smiley face" style="float:right;width: 42px;height: 42px;"> The image will float to the right of the text </p>
+    <table style="width: 100%;">
+        <tr>
+            <th> Person One </th>
+            <th style="width: 60%;"> Person Two </th>
+            <th> Person Three </th>
+        </tr>
+        <tr style="height: 200px;">
+            <td> James </td>
+            <td> Mathew </td>
+            <td> John </td>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <caption> Contestants </caption>
+        <tr>
+          <th>Firstname</th>
+          <td>Jill</td>
+          <td>Eve</td>
+        </tr>
+        <tr>
+          <th>Lastname</th>
+          <td>Smith</td>
+          <td>Jackson</td>
+        </tr>
+        <tr>
+          <th>Age</th>  
+          <td>50</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <!--To use the first column as table headers, define the first cell in each row as a <th> element.-->
+    <dl>
+        <dt> Coffee </dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+    <ul style="list-style: circle;">
+    </ul>
+    <ul style="list-style: disc;">
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is the description of my website that will appear in search results.">
+        <meta property="og:title" content="My Website Title">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.mywebsite.com/">
+        <meta property="og:description" content="This is the description of my website that will appear on social media platforms.">
+        <meta property="og:image" content="https://i.pinimg.com/736x/38/52/a0/3852a07d2f6828ca4c9d9547fac8bed3.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="My Website Title">
+        <meta name="twitter:description" content="This is the description of my website that will appear on Twitter">
+        <meta name="twitter:image" content="https://i.pinimg.com/736x/38/52/a0/3852a07d2f6828ca4c9d9547fac8bed3.jpg">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "My Website",
+                "description": "A website about XYZ",
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>My Website Header</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" aria-label="Link to home page">Home</a></li>
+                    <li><a href="#" aria-label="Link to about page">About</a></li>
+                    <li><a href="#" aria-label="Link to services page">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Welcome to my website</h2>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+ 
+            <section style="background-color: rgb(250, 250, 250); color: rgb(250, 250, 250);">
+                <h3>My Section Header</h3>
+                <p>This is a section of content.</p>
+            </section>
+ 
+ 
+            <div itemscope itemtype="http://schema.org/Product">
+                <h1>Product Name</h1>
+                <img src="https://i.pinimg.com/736x/38/52/a0/3852a07d2f6828ca4c9d9547fac8bed3.jpg">
+                <p itemprop="description"> Product Description </p>
+                <div>
+                    <p>20.00</p>
+                    <p>
+                        <span itemprop="priceCurrency" content="GBP">GBP</span>
+                    </p>
+                </div>
+            </div>
+ 
+            <form action="#" id="myform" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+ 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+ 
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br><br>
+ 
+                <input type="submit" value="submit">
+            </form>
+        </main>
+ 
+        <footer>
+            <p style="font-size: 15px;">&copy; My Website 2021</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Welcome to Rocket Inc. </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        <p style="font-size: 30px; line-height: 2;">
+            <span id="launch_counter"> 00:00:00 </span>
+            <button style="background: none; border: none; background-color: #FF0000; " onclick="alert('You clicked me')">
+                <img style="width:30px; height: auto; display: block;"
+            src="https://cdn0.iconfinder.com/data/icons/glyphack/41/refresh-512.png"></img>
+            </button>
+        </p>
+        const lanchDate = new Date('June 5, 2022 11:00:00').getTime()
+
+        const calculateDifference = () => {
+            // Get the time right now 
+            const now = new Date().getTime()
+
+        return launchDate - now;
+        }
+
+        const updateCounter = () => {
+            const timeDifference = calculateDifference()
+
+            const days = Math.floor(timeDifference / (1000*60*60*24))
+            const hours = Math.floor((timeDifference % (1000*60*60*24)) / (1000*60*60))
+            const minutes = Math.floor((timeDifference % (1000*60*60)) / (1000*60))
+            const seconds = Math.floor((timeDifference % (1000*60)) / 1000)
+
+            const outputElement = document.getElementById('launch_counter')
+
+            outputElement.innerHTML =  days + "d " + hours + "h " + minutes + "m " + seconds + "s "
+        }
+    </script>
+    <h2> Social Media presence </h2>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+
+</body>
+</html>
